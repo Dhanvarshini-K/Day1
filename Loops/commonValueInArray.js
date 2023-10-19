@@ -2,7 +2,7 @@
 //Output: [8]
 
 
-var array1=[1,3,33,8,8, 8];
+var array1=[1,3,33,8,8];
 var array2=[76,8,13,54];
 
 function getCommonItems(array1,array2){
