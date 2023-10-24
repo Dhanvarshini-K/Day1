@@ -5,7 +5,7 @@ var array = [3, 4, 5, 6, 88];
 
 
 function findLargest(array,k){
-    if(k<1||k>array.length){
+    if(k<1 || k>array.length){
         return "k is not a range";
     }
     array.sort((a,b)=>b-a);

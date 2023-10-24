@@ -2,7 +2,7 @@
 //Output: arun@ddd
 
 let inputString = "arun@123";
-let replacementChar = "$";
+let replacementChar = "d";
 function replaceNumber(inputString,replacementChar){
     let result = "";
     for(i=0; i<inputString.length; i++){

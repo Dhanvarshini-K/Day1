@@ -2,14 +2,14 @@
 //output: c@t in the bag
 
 
-//let inputString= "cat in the bag";
-let inputString= "cccccat in the bag";
+let inputString= "cat in the bag";
+
 function addSpecialCharacter(inputString){
     let result="";
     for(i = 0; i<inputString.length; i++){
         const currentChar = inputString[i];
         if(currentChar==='c'||currentChar==='C'){
-         result+=currentChar+'@';
+         result+=currentChar+'*';
          i++;
         }
         else{

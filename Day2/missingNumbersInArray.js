@@ -1,7 +1,7 @@
 //Find the missing numbers in an array
 //Output: missing numbers in range [68-73] is 70, 72
 
-var array=[68, 71, 69, 73];
+var array=[68, 71, 69, 73,65,82,70];
 function findMissingNumbers(array){
     array.sort((a,b)=>a-b);
     let missingNumber=[];
