@@ -22,8 +22,10 @@ function findTheremoveTrailingZeros(input) {
 }
 
 
-console.log(removeLeadingZeros("0002356008684000"));  
-console.log(removeTrailingZeros("0002356008684000"));  
-console.log(removeTrailingZeros("00000hello0000"));
-console.log(removeLeadingZeros("2356008684"));  
-console.log(removeTrailingZeros("2356008684"));      
+console.log(findTheremoveLeadingZeros("0002356008684000"));  
+console.log(findTheremoveTrailingZeros("0002356008684000"));  
+console.log(findTheremoveTrailingZeros("00000hello0000"));
+console.log(findTheremoveLeadingZeros("2356008684"));  
+console.log(findTheremoveTrailingZeros("hello"));      
+
+

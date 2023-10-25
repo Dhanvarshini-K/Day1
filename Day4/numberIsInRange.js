@@ -3,7 +3,12 @@
 // checkInRange([10, 100], 8) // true false 8 is not in between 10 and 100
 
 function checkInRange(range, number) {
-    return Array.isArray(range) && range.length === 2 && number >= range[0] && number <= range[1]
+  if(Array.isArray(range) && range.length === 2 && number >= range[0] && number <= range[1]){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 
 console.log(checkInRange([1, 10], 4));   

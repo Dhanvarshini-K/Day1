@@ -9,9 +9,9 @@ function convertToMinutes(time) {
     if (parts.length !== 2 ) {
         return "Invalid time format. Please use 'hh:mm' format.";
     }
-
-    const hours = parseInt(parts[0]);
-    const minutes = parseInt(parts[1]);
+    //The Number() method converts a value to a number.
+    const hours = Number(parts[0]);
+    const minutes = Number(parts[1]);
 
     if (isNaN(hours) || isNaN(minutes) || hours < 0 || minutes < 0 || minutes >= 60) {
         return "Invalid time values. Please provide valid hours and minutes.";
