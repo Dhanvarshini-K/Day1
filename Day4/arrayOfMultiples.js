@@ -4,7 +4,7 @@
 // Result: [2, 4, 6, 8, 10]
 //---------------------------------------------------------------------------------------------------------
 
-function getTheResultOfTheArrayInMultiples(array) {
+function findTheResultOfTheArrayInMultiples(array) {
     if (!Array.isArray(array) || array.length !== 2) {
         return "Invalid input. Please provide an array with two elements: [number, limit].";
     }
