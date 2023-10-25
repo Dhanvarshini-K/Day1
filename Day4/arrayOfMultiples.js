@@ -33,4 +33,4 @@ console.log(getTheResultOfTheArrayInMultiples([true]));
 console.log(getTheResultOfTheArrayInMultiples(true)); 
 console.log(getTheResultOfTheArrayInMultiples(["$"])); 
 console.log(getTheResultOfTheArrayInMultiples([2, 5, 7, 6])); 
-console.log(getTheResultOfTheArrayInMultiples([2, -5]));
+console.log(getTheResultOfTheArrayInMultiples([-2, -5]));
