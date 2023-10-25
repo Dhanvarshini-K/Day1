@@ -3,8 +3,11 @@
 // charRepeating(“traaainngfornewbie”);
 // Output: a
 // // since a has more repeating simaltaneously
-
+//--------------------------------------------------------------------------------------------------------
 function charRepeating(inputString) {
+  if( typeof inputString !== "string"){
+    return "invalid";
+  }
     let maxChar = '';
     let maxCount = 0;
     let currentChar = '';
@@ -17,15 +20,15 @@ function charRepeating(inputString) {
         currentChar = char;
         currentCount = 1;
       }
-  
       if (currentCount > maxCount) {
         maxChar = currentChar;
         maxCount = currentCount;
       }
     }
-  
     return maxChar;
   }
 
-const result = charRepeating("traaainngfornewbie");
-console.log(result);
+ const result = charRepeating("traaainngfornewbie");
+ const result1 = charRepeating(true);
+ console.log(result);
+ console.log(result1);
