@@ -41,4 +41,5 @@ console.log(removeZeros("0.00000123423423000","leading"));
 console.log(removeZeros("0.00000123423423000","trailing"));
 console.log(removeZeros("true","trailing"));
 console.log(removeZeros("-000000123423423000",6));
+console.log(removeZeros(6,7));
 
