@@ -4,6 +4,17 @@
 // removeZeros(input, "trailing") // output 000000123423423
 //--------------------------------------------------------------------------------------------------------
 
+function removeZeros(input,type){
+  if(input < 0 || input === "" || typeof (input,type) !== "string" ){
+    return "Invalid input";
+  } 
+  if(type === "leading"){
+    return findTheremoveLeadingZeros(input,type);
+  }
+  else{
+    return findTheremoveTrailingZeros(input,type);
+  }
+}
 function findTheremoveLeadingZeros(input) {
 
   let i = 0;
@@ -22,9 +33,12 @@ function findTheremoveTrailingZeros(input) {
 }
 
 
-console.log(removeLeadingZeros("0002356008684000"));  
-console.log(removeTrailingZeros("0002356008684000"));  
-console.log(removeTrailingZeros("00000hello0000"));
-console.log(removeLeadingZeros("2356008684"));  
-console.log(removeTrailingZeros("2356008684"));      
-console.log(removeTrailingZeros("2356008684"));   
+console.log(removeZeros("000000123423423000","leading"));
+console.log(removeZeros("000000123423423000","trailing"));
+console.log(removeZeros("-000000123423423000","leading"));
+console.log(removeZeros("hello","leading"));
+console.log(removeZeros("0.00000123423423000","leading"));
+console.log(removeZeros("0.00000123423423000","trailing"));
+console.log(removeZeros("true","trailing"));
+console.log(removeZeros("-000000123423423000",6));
+
