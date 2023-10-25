@@ -3,7 +3,7 @@
 // For example: 9840164723 to "(984)016-473"
 // Throw error if it's not a valid phone number
 //----------------------------------------------------------------------------------------------------------
-function formatPhoneNumber(number) {
+function getTheformatPhoneNumber(number) {
    
         if (typeof number !== "string" && typeof number !== "number") {
           return 'Invalid input. Please provide a valid ten-digit number.';
