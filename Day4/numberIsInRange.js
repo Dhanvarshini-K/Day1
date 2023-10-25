@@ -10,8 +10,6 @@ function checkInRange(range, number) {
     return false;
   }
 }
-
-
 console.log(checkInRange([1, 10], 4));   
 console.log(checkInRange([10, 100], 8));
 console.log(checkInRange(["hello", "world"], 8));
