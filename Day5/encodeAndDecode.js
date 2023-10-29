@@ -7,16 +7,17 @@
 // decode(“ctwp”, 2) -> arun
 // decode(“evyr”, 4) -> arun
 
-function findTheEncodeAndDecode(dataType,value){
-    const letters = "A-Za-z";
-    if(dataType !== "string"){
+function findTheEncodeAndDecode(inputString,value){
+   
+    if(typeof inputString !== "string" && typeof value !== "number"){
         return empty;
     }
-    if(functionname() === encode){
-        return encode(dataType,value);
+    const letters = [/^[A-Za-z]+$/];
+    if(value === "encode"){
+        return encode(inputString,value);
     }
     else{
-        return decode(dataType,value);
+        return decode(inputString,value);
     }
 
     function encode(){
