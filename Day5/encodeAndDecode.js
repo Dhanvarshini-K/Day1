@@ -20,10 +20,10 @@ function findTheEncodeAndDecode(inputString,value){
         return decode(inputString,value);
     }
 
-    function encode(){
+    function encode(inputString,value){
 
     }
-    function decode(){
+    function decode(inputString,value){
 
     }
 }
