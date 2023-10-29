@@ -7,23 +7,31 @@
 // decode(“ctwp”, 2) -> arun
 // decode(“evyr”, 4) -> arun
 
-function findTheEncodeAndDecode(inputString,value){
+function findTheEncoderAndDecoder(input, shift) {
+    if(typeof input !== "string" || typeof shift !== "number"){
+        return "Invalid type";
+    }
+    let result = '';
+    for (let i = 0; i < input.length; i++) {
+      const char = input[i];
+      if (char >= 'a' && char <= 'z') {
+        const shiftedChar = String.fromCharCode(((char.charCodeAt(0) - 97 + shift) % 26) + 97);
+        result += shiftedChar;
+      } else if (char >= 'A' && char <= 'Z') {
+        const shiftedChar = String.fromCharCode(((char.charCodeAt(0) - 65 + shift) % 26) + 65);
+        result += shiftedChar;
+      } else {
+        result += char; 
+      }
+    }
+    return result;
+  }
    
-    if(typeof inputString !== "string" && typeof value !== "number"){
-        return empty;
-    }
-    const letters = [/^[A-Za-z]+$/];
-    if(value === "encode"){
-        return encode(inputString,value);
-    }
-    else{
-        return decode(inputString,value);
-    }
-
-    function encode(inputString,value){
-
-    }
-    function decode(inputString,value){
-
-    }
-}
+  console.log( findTheEncoderAndDecoder("arun", 2));
+  console.log(findTheEncoderAndDecoder("ctwp", -2)); // Decoding is achieved by shifting in the opposite direction
+  console.log(findTheEncoderAndDecoder("arun", 4));
+  console.log(findTheEncoderAndDecoder("evyr", -4));
+  console.log(findTheEncoderAndDecoder(true,3));
+  console.log(findTheEncoderAndDecoder("arun",-2))
+  console.log(findTheEncoderAndDecoder("arun",-2.6))
+  
