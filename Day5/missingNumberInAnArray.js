@@ -4,15 +4,27 @@
 // Note: The numbers will be given as input in any order.
 
 
-const array = [7,10,12,9];
-array.sort((a,b)=>a-b);
+
+
+
 function findTheMissingNumber(array){
-const missingNumber = [];
-for(i=array[0]; i<array[array.length-1]; i++){
+
+    array.sort((a,b)=>a-b);
+
+    if(!Array.isArray(array)){
+        return "Invalid";
+      }
+
+    const missingNumber = [];
+
+    for(i=array[0]; i<array[array.length-1]; i++){
+
     if(!array.includes(i)){
         missingNumber.push(i);
     }
 }
 return missingNumber;
 }
-console.log(findTheMissingNumber(array));
+console.log(findTheMissingNumber([7,10,12,9]));
+console.log(findTheMissingNumber([7,"hello",12,9]));
+console.log(findTheMissingNumber([7,10,12,true,9]));

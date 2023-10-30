@@ -4,12 +4,17 @@
 // Output will be 47
 
 
-const array = [45, 2, 25, 11, 16];
-
-const sortedArray = array.sort((a, b) => a - b);
-const smallest = sortedArray[0];
-const largest = sortedArray[sortedArray.length - 1];
 function getTheSumOfSmallestAndLargestNumberInAnArray(array) {
+    for (const item of array) {
+        if (typeof item !== "number") {
+          return "Invalid";
+        }
+      }
+    
+    const sortedArray = array.sort((a, b) => a - b);
+    const smallest = sortedArray[0];
+    const largest = sortedArray[sortedArray.length - 1];
     return smallest + largest;
 }
-console.log(getTheSumOfSmallestAndLargestNumberInAnArray(array)); 
+console.log(getTheSumOfSmallestAndLargestNumberInAnArray([45, 2, 25, 11, 16])); 
+console.log(getTheSumOfSmallestAndLargestNumberInAnArray([45, 2, "hello", 11, 16])); 
