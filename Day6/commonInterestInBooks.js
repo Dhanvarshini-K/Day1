@@ -32,7 +32,6 @@ const students = [
     },
   ];
   
-  // Finding the common interests in books
   const bookInterest = {};
   
   students.forEach(student => {
@@ -45,30 +44,29 @@ const students = [
     });
   });
   
-  console.log("Common interests in books:");
+  console.log("Interests in books:");
   for (const book in bookInterest) {
-    console.log(`${book} - [${bookInterest[book].join(', ')}]`);
+    console.log(`${book} - [${bookInterest[book].join(',')}]`);
   }
-  
-  // Finding the user who shares the most interest with other users
-  const userInterestCount = {};
+
+  const studentInterestCount = {};
   
   students.forEach(student => {
-    userInterestCount[student.name] = 0;
+    studentInterestCount[student.name] = 0;
   
     student.books.forEach(book => {
-      userInterestCount[student.name] += bookInterest[book].length - 1; // Subtract 1 to exclude the current student
+      studentInterestCount[student.name] += bookInterest[book].length - 1; 
     });
   });
   
   let mostInterestUser = '';
   let mostInterestCount = 0;
   
-  for (const user in userInterestCount) {
-    if (userInterestCount[user] > mostInterestCount) {
+  for (const user in studentInterestCount) {
+    if (studentInterestCount[user] > mostInterestCount) {
       mostInterestUser = user;
-      mostInterestCount = userInterestCount[user];
+      mostInterestCount = studentInterestCount[user];
     }
   }
   
-  console.log(`User who shares the most interest with other users: ${mostInterestUser}`);
+  console.log(`Find the User who shares the most interest with other users: ${mostInterestUser}`);
