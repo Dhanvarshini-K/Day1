@@ -120,15 +120,15 @@ const groceryList = [
       const jsonObject = userSelectedItemList.map(JSON.stringify);
       const uniqueItem = new Set(jsonObject);
       const uniqueArray = Array.from(uniqueItem).map(JSON.parse);
- 
-      for (const selectedItem of uniqueArray) {
+      
+      uniqueArray.map((selectedItem) => {
           const groceryItem = groceryList.find((item) => item.product === selectedItem.item);
   
           if (groceryItem  && typeof selectedItem.quantity === "number" && parseInt(selectedItem.quantity) > 0) {
               const availableQuantity = Math.min(groceryItem.Quantity, selectedItem.quantity);
               totalAmount += parseFloat(groceryItem.price.replace('$', '')) * availableQuantity;
           }
-      }
+      });
   
       return totalAmount.toFixed(2);
   }
@@ -138,6 +138,7 @@ const groceryList = [
       { item: "Tea - Herbal Sweet Dreams", quantity: 1 },
       { item: "Goldschalger", quantity: -4.4 },
       { item: "Jam - Apricot", quantity: "hello" },
+      { item: "Tea - Herbal Sweet Dreams", quantity: 2 },
   ], groceryList);
   
   console.log(`Total Bill: $${bill}`);
